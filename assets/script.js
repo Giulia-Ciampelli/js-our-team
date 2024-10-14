@@ -83,6 +83,10 @@ formElement.addEventListener('submit', (e)=> {
   e.preventDefault();
 
   // aggiungi valori input
+  let inputName = document.getElementById('name').value;
+  let inputRole = document.getElementById('role').value;
+  let inputEmail = document.getElementById('email').value;
+  let inputImage = document.getElementById('img').value;
 
   // aggiungi creazione oeegtto, che lo mette al markup
 })
