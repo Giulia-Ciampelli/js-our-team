@@ -55,17 +55,19 @@ for (let i = 0; i < teamMembers.length; i++) {
   // 3. crea il markup
   let markup = `
   <div class="col-4">
-    <div class="card">
+    <div class="d-flex flex-row bg-black text-light">
         <img src="${img}" alt="">
-        <h3>
+        <div class="p-3">
+          <h3>
           ${name}
-        </h3>
-        <p>
+          </h3>
+          <p>
           ${role}
-        </p>
-        <a href="mailto:${email}">
+          </p>
+          <a href="mailto:${email}">
           ${email}
-        </a>
+          </a>
+        </div>
     </div>
   </div>`;
   console.log(markup);
