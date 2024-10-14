@@ -76,3 +76,13 @@ for (let i = 0; i < teamMembers.length; i++) {
   // 4. stampalo a schermo (addition assignment)
   rowElement.innerHTML += markup;
 }
+
+console.log(formElement);
+
+formElement.addEventListener('submit', (e)=> {
+  e.preventDefault();
+
+  // aggiungi valori input
+
+  // aggiungi creazione oeegtto, che lo mette al markup
+})
