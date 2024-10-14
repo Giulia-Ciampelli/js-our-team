@@ -56,14 +56,14 @@ for (let i = 0; i < teamMembers.length; i++) {
   let markup = `
   <div class="col-4">
     <div class="card">
-        <img src="" alt="">
+        <img src="${img}" alt="">
         <h3>
-
+          ${name}
         </h3>
         <p>
-
+          ${role}
         </p>
-        <a href="mailto:">
+        <a href="mailto:${email}">
         </a>
     </div>
   </div>`;
