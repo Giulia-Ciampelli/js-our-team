@@ -43,35 +43,42 @@ const teamMembers = [
 let rowElement = document.querySelector('.row');
 let formElement = document.querySelector('form');
 
+// creazione funzione per creare markup
+function generateMember(member) {
+    
+  // 2. individua le proprietà degli oggetti
+    let {name, role, email, img} = member;
+
+    // 3. crea il markup
+    return markup = `
+    <div class="col-lg-4 col-md-6 col-sm-1">
+      <div class="d-flex flex-row bg-black text-light">
+          <div class="d-block">
+            <img src="${img}" class="" alt="">
+          </div>  
+          <div class="m-auto">
+            <h5 class="text-uppercase">
+            ${name}
+            </h5>
+            <p>
+            ${role}
+            </p>
+            <a href="mailto:${email}" class="link-info link-underline-opacity-0">
+            ${email}
+            </a>
+          </div>
+      </div>
+    </div>`;
+}
+
 // ciclo for dell'array per creare il markup
 for (let i = 0; i < teamMembers.length; i++) {
   
   // 1. individua l'oggetto singolo
   let member = teamMembers[i];
 
-  // 2. individua le proprietà degli oggetti
-  let {name, role, email, img} = member;
-
-  // 3. crea il markup
-  let markup = `
-  <div class="col-lg-4 col-md-6 col-sm-1">
-    <div class="d-flex flex-row bg-black text-light">
-        <div class="d-block">
-          <img src="${img}" class="" alt="">
-        </div>  
-        <div class="m-auto">
-          <h5 class="text-uppercase">
-          ${name}
-          </h5>
-          <p>
-          ${role}
-          </p>
-          <a href="mailto:${email}" class="link-info link-underline-opacity-0">
-          ${email}
-          </a>
-        </div>
-    </div>
-  </div>`;
+  // richiamo funzione
+  generateMember(member);
 
   // 4. stampalo a schermo (addition assignment)
   rowElement.innerHTML += markup;
@@ -87,6 +94,8 @@ formElement.addEventListener('submit', (e)=> {
   let inputRole = document.getElementById('role').value;
   let inputEmail = document.getElementById('email').value;
   let inputImage = document.getElementById('img').value;
+  console.log(inputEmail, inputImage, inputName, inputRole);
 
-  // aggiungi creazione oeegtto, che lo mette al markup
+  // aggiungi creazione oggetto, che lo mette al markup
+  
 })
