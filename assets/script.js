@@ -53,5 +53,21 @@ for (let i = 0; i < teamMembers.length; i++) {
   console.log(member);
 
   // 3. crea il markup
+  let markup = `
+  <div class="col-4">
+    <div class="card">
+        <img src="" alt="">
+        <h3>
+
+        </h3>
+        <p>
+
+        </p>
+        <a href="mailto:">
+        </a>
+    </div>
+  </div>`;
+  console.log(markup);
+
   // 4. stampalo a schermo (addition assignment)
 }
