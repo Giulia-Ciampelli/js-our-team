@@ -53,7 +53,7 @@ for (let i = 0; i < teamMembers.length; i++) {
 
   // 3. crea il markup
   let markup = `
-  <div class="col-4">
+  <div class="col-lg-4 col-md-6 col-sm-1">
     <div class="d-flex flex-row bg-black text-light">
         <img src="${img}" class="h-25" alt="">
         <div class="p-3">
