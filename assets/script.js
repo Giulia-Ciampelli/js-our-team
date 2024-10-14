@@ -50,27 +50,25 @@ for (let i = 0; i < teamMembers.length; i++) {
 
   // 2. individua le proprietà degli oggetti
   let {name, role, email, img} = member;
-  console.log(member);
 
   // 3. crea il markup
   let markup = `
   <div class="col-4">
     <div class="d-flex flex-row bg-black text-light">
-        <img src="${img}" alt="">
+        <img src="${img}" class="h-25" alt="">
         <div class="p-3">
-          <h3>
+          <h5 class="text-uppercase">
           ${name}
-          </h3>
+          </h5>
           <p>
           ${role}
           </p>
-          <a href="mailto:${email}">
+          <a href="mailto:${email}" class="link-info link-underline-opacity-0">
           ${email}
           </a>
         </div>
     </div>
   </div>`;
-  console.log(markup);
 
   // 4. stampalo a schermo (addition assignment)
   rowElement.innerHTML += markup;
