@@ -41,6 +41,7 @@ const teamMembers = [
 
 // variabili
 let rowElement = document.querySelector('.row');
+let formElement = document.querySelector('form');
 
 // ciclo for dell'array per creare il markup
 for (let i = 0; i < teamMembers.length; i++) {
