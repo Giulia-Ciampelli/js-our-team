@@ -38,3 +38,12 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// variabili
+let rowElement = document.querySelector('.row');
+
+// ciclo for dell'array per creare il markup
+  // 1. individua l'oggetto singolo
+  // 2. individua le proprietà degli oggetti
+  // 3. crea il markup
+  // 4. stampalo a schermo (addition assignment)
