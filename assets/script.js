@@ -43,7 +43,12 @@ const teamMembers = [
 let rowElement = document.querySelector('.row');
 
 // ciclo for dell'array per creare il markup
+for (let i = 0; i < teamMembers.length; i++) {
+  
   // 1. individua l'oggetto singolo
+  member = teamMembers[i];
+
   // 2. individua le proprietà degli oggetti
   // 3. crea il markup
   // 4. stampalo a schermo (addition assignment)
+}
