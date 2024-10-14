@@ -46,9 +46,12 @@ let rowElement = document.querySelector('.row');
 for (let i = 0; i < teamMembers.length; i++) {
   
   // 1. individua l'oggetto singolo
-  member = teamMembers[i];
+  let member = teamMembers[i];
 
   // 2. individua le proprietà degli oggetti
+  let {name, role, email, img} = member;
+  console.log(member);
+
   // 3. crea il markup
   // 4. stampalo a schermo (addition assignment)
 }
