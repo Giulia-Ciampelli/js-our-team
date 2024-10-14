@@ -42,15 +42,16 @@ const teamMembers = [
 // variabili
 let rowElement = document.querySelector('.row');
 let formElement = document.querySelector('form');
+let teamElement = document.getElementById('team');
 
 // creazione funzione per creare markup
 function generateMember(member) {
-    
-  // 2. individua le proprietà degli oggetti
-    let {name, role, email, img} = member;
 
-    // 3. crea il markup
-    return markup = `
+  // individua le proprietà degli oggetti
+  let { name, role, email, img } = member;
+
+  // crea il markup
+  return markup = `
     <div class="col-lg-4 col-md-6 col-sm-1">
       <div class="d-flex flex-row bg-black text-light">
           <div class="d-block">
@@ -73,20 +74,20 @@ function generateMember(member) {
 
 // ciclo for dell'array per creare il markup
 for (let i = 0; i < teamMembers.length; i++) {
-  
-  // 1. individua l'oggetto singolo
+
+  // individua l'oggetto singolo
   let member = teamMembers[i];
 
   // richiamo funzione
-  generateMember(member);
+  let markup = generateMember(member);
 
-  // 4. stampalo a schermo (addition assignment)
+  // stampalo a schermo (addition assignment)
   rowElement.innerHTML += markup;
 }
 
 console.log(formElement);
 
-formElement.addEventListener('submit', (e)=> {
+formElement.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // aggiungi valori input
@@ -96,6 +97,22 @@ formElement.addEventListener('submit', (e)=> {
   let inputImage = document.getElementById('img').value;
   console.log(inputEmail, inputImage, inputName, inputRole);
 
-  // aggiungi creazione oggetto, che lo mette al markup
-  
+  // nuovo oggetto
+  const newMember = {
+    name: inputName,
+    role: inputRole,
+    email: inputEmail,
+    img: inputImage
+  };
+
+  console.log(newMember);
+
+  // aggiunta oggetto all'array
+  teamMembers.push(newMember);
+
+  // richiamo funzione
+  let newMemberMarkup = generateMember(newMember);
+
+  // stampa a schermo (addition assignment)
+  teamElement.innerHTML += newMemberMarkup;
 })
