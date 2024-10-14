@@ -14,3 +14,7 @@ h5 {
 p, a {
     font-weight: 700;
 }
+
+img {
+    max-width: 130px;
+}
