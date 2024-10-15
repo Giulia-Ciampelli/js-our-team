@@ -1,5 +1,3 @@
-console.log('im alive');
-
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -85,8 +83,6 @@ for (let i = 0; i < teamMembers.length; i++) {
   rowElement.innerHTML += markup;
 }
 
-console.log(formElement);
-
 formElement.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -95,7 +91,6 @@ formElement.addEventListener('submit', (e) => {
   let inputRole = document.getElementById('role').value;
   let inputEmail = document.getElementById('email').value;
   let inputImage = document.getElementById('img').value;
-  console.log(inputEmail, inputImage, inputName, inputRole);
 
   // nuovo oggetto
   const newMember = {
@@ -104,8 +99,6 @@ formElement.addEventListener('submit', (e) => {
     email: inputEmail,
     img: inputImage
   };
-
-  console.log(newMember);
 
   // aggiunta oggetto all'array
   teamMembers.push(newMember);
